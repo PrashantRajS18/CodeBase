@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    background-color: #eee7e7;
+    font-size: 1.8vw;
+}
+.Header{
+    text-align: center;
+}
+.h1{
+    text-shadow: 1px 1px #c7baba;
+}
+hr{
+   border: 5px solid #8d5454;
+}
+@media only screen and (max-width: 800px) {
+    *{
+        font-size: 2.8vw;
+        
+    }
+    .h1{
+        text-shadow: 0px 0px #c7baba;
+    }
+}
