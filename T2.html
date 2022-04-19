@@ -10,7 +10,7 @@
 <body>
     <header>
 		<nav>
-			<div class="navbar">
+			<div class="navbar ">
 				<a class="active" href="task1.html"> Home</a> 
 				<a href="#Video"> Video</a> 
 				<a href="#Audio"> Audio</a> 
@@ -19,22 +19,23 @@
 		</nav>
 	</header>
     <section>
-		<h3>Video file</h3>
-		<div id="Video">
-			<video   width="400" autoplay muted>
-				<source src="../video.mp4" type="video/mp4">
-				<source src="../video.mp4" type="video/ogg">
+		
+		<div id="Video" class="Videocard">
+			<h3>Video file</h3>
+			<video   width="350"  autoplay muted>
+				<source src="img/video.mp4" type="video/mp4">
+				<source src="Img/video.mp4" type="video/ogg">
 				Your browser does not support HTML video.
 			</video>
 		</div>
 		<hr>
 	</section>
 	<section>
-		<h3>Audio file</h3>
-		<div id="Audio">
+		<div id="Audio" class="Audiocard">
+			<h3>Audio file</h3>
 			<audio controls>
-				<source src="../audio.mp3" type="audio/ogg">
-				<source src="../audio.mp3" type="audio/mpeg">
+				<source src="img/audio.mp3" type="audio/ogg">
+				<source src="img/audio.mp3" type="audio/mpeg">
 			</audio>
 		</div>
 	</section>
