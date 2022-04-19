@@ -1,10 +1,24 @@
 *{
-    padding: 0;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    background-color: #eee7e7;
     font-size: 1.8vw;
 }
+.container{
+    background-color: #eee7e7;
+}
+.navbar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+  }
+  .navbar a {
+    float: left;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .navbar a:hover {
+    background-color: #000;
+  }
 .Header{
     text-align: center;
 }
@@ -22,10 +36,22 @@ hr{
     .h1{
         text-shadow: 0px 0px #c7baba;
     }
+    video{
+        width: 250px;
+    }
 }
 .Ftech{
     list-style-type: upper-roman;
 }
 .Ftools{
     list-style-type: circle;
+}
+#video{
+    margin: auto;
+    width: 50%;
+}
+.center{
+    margin: auto;
+    width: 50%;
+    height: 17rem;
 }
