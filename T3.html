@@ -30,12 +30,12 @@
             <br>
             <div>
               <label for="name">Enter your name:</label><br>
-              <input type="text" id="name"  class="input1" name="name" placeholder="name "><br><br>
+              <input type="text" id="name"  class="input1" name="name" placeholder="name " required><br><br>
            
               <label for="Specialization">Specialization</label><br>
-              <input type="Specialization" class="input1" id="Specialization" name="Specialization" placeholder=" Specialization"><br><br>
+              <input type="Specialization" class="input1" id="Specialization" name="Specialization" placeholder=" Specialization" required><br><br>
                 <label for="birthdaytime">DOB</label>
-                <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+                <input type="datetime-local" id="birthdaytime" required name="birthdaytime">
             </div>
             <div class="fclass">
               <h2 >Choose file type</h2>
@@ -53,8 +53,14 @@
             </div>
             <section>
               <label for="myfile" class="file">Choose The file<i class="fa fa-file" style="padding-left: 10px;" aria-hidden="true"></i></label>
-              <input type="file" id="myfile" name="myfile" style="display: none;"><br><br>
+              <input type="file" id="myfile" name="myfile" required style="display: none;"><br><br>
 												</section>
+												<div>
+													<fieldset>
+														<legend for="desc">Whe we would hire you</legend>
+														<textarea id="desc" rows="5" cols="40" style="border: px;"></textarea>
+													</fieldset>
+												</div>
             <div class="btn">
                 <button type="submit">Submit</button>
             </div>
