@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+	<header>
+		<nav>
+			<div class="navbar ">
+				<a  href="task1.html"> Home</a> 
+				<a href="T2.html"> Video</a> 
+				<a href="T2.html"> Audio</a> 
+				<a href="T2.html"> Multimedia</a>
+				<a class="active" href="t3.html">Form & Record</a>
+			</div>
+		</nav>
+	</header>
+    <section class="Header">
+        <h1 class="h1">
+            Table and Form
+        </h1>
+				</section>
+    <section>
+        <form action="/action_page.php" class="form-control">
+            <br>
+            <div>
+              <label for="name">Enter your name:</label><br>
+              <input type="text" id="name"  class="input1" name="name" placeholder="name "><br><br>
+           
+              <label for="Specialization">Specialization</label><br>
+              <input type="Specialization" class="input1" id="Specialization" name="Specialization" placeholder=" Specialization"><br><br>
+                <label for="birthdaytime">DOB</label>
+                <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+            </div>
+            <div class="fclass">
+              <h2 >Choose file type</h2>
+            <input type="radio" id="Resume" name="file" value="choose a file option">
+            <label for="Resume">Resume</label><br>
+            <input type="radio" id="CV" name="file" value="choose a file option">
+            <label for="CV">CV</label>
+            </div>
+            <div class="fclass">
+              <h2>Employement type</h2>
+              <input type="checkbox" id="Ptime" name="Ptime" value="Part Time">
+              <label for="Ptime"> Part Time</label><br>
+              <input type="checkbox" id="ftime" name="ftime">
+              <label for="ftime">Full Time</label>
+            </div>
+            <section>
+              <label for="myfile" class="file">Choose The file<i class="fa fa-file" style="padding-left: 10px;" aria-hidden="true"></i></label>
+              <input type="file" id="myfile" name="myfile" style="display: none;"><br><br>
+												</section>
+            <div class="btn">
+                <button type="submit">Submit</button>
+            </div>
+          </form> 
+          <br>
+          <hr>
+    </section>
+    <section>
+      <table>
+        <thead>
+          <caption>
+            <h1>Company</h1>
+          </caption>
+        </thead>
+        <tbody>
+          <tr>
+            <th>N0.</th>
+            <th>Full Name</th>
+            <th>Specialization</th>
+            <th>Salary</th>
+            <th>Employment type</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Prashant</td>
+            <td>SDE</td>
+            <td>$25000</td>
+            <td rowspan="4" style="background-color: #bbdcc2;">Full Time</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Gaurav</td>
+            <td>Manager</td>
+            <td>$20000</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Ujjawal</td>
+            <td>Project Manager</td>
+            <td>$15000</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Reetool </td>
+            <td>Accountant</td>
+            <td>$10000</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <!-- <td>5</td> -->
+            <td colspan="3" style="background-color: aqua;">Total Expense</td >
+            <td colspan="2" style="background-color: #1ac53f;">$70,000</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+</body>
+</html>
