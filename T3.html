@@ -26,14 +26,14 @@
         </h1>
 				</section>
     <section>
-        <form action="/action_page.php" class="form-control">
+        <form id="myform" class="form-control">
             <br>
             <div>
               <label for="name">Enter your name:</label><br>
-              <input type="text" id="name"  class="input1" name="name" placeholder="name " required><br><br>
+              <input type="text" id="name" class="input1" name="name" placeholder="name " required><br><br>
            
               <label for="Specialization">Specialization</label><br>
-              <input type="Specialization" class="input1" id="Specialization" name="Specialization" placeholder=" Specialization" required><br><br>
+              <input type="text" class="input1" id="Specialization" name="special" placeholder=" Specialization" required><br><br>
                 <label for="birthdaytime">DOB</label>
                 <input type="datetime-local" id="birthdaytime" required name="birthdaytime">
             </div>
@@ -57,12 +57,12 @@
 												</section>
 												<div>
 													<fieldset>
-														<legend for="desc">Whe we would hire you</legend>
-														<textarea id="desc" rows="5" cols="40" style="border: px;"></textarea>
+														<legend >Whe we would hire you</legend>
+														<textarea id="desc" rows="5" cols="40" style="resize: none;"></textarea>
 													</fieldset>
 												</div>
             <div class="btn">
-                <button type="submit">Submit</button>
+                <button type="submit" id="send">Submit</button>
             </div>
           </form> 
           <br>
@@ -71,18 +71,16 @@
     <section>
       <table>
         <thead>
-          <caption>
-            <h1>Company</h1>
-          </caption>
-        </thead>
-        <tbody>
+        
           <tr>
             <th>N0.</th>
             <th>Full Name</th>
             <th>Specialization</th>
             <th>Salary</th>
-            <th>Employment type</th>
+            <th colspan="2">Employment type</th>
           </tr>
+										</thead>
+										<tbody>
           <tr>
             <td>1</td>
             <td>Prashant</td>
@@ -94,13 +92,14 @@
             <td>2</td>
             <td>Gaurav</td>
             <td>Manager</td>
-            <td>$20000</td>
+            <td rowspan="2">$20000</td>
+												<td rowspan="4">Part time</td>
           </tr>
           <tr>
             <td>3</td>
             <td>Ujjawal</td>
             <td>Project Manager</td>
-            <td>$15000</td>
+            <!-- <td>$15000</td> -->
           </tr>
           <tr>
             <td>4</td>
@@ -118,5 +117,23 @@
         </tfoot>
       </table>
     </section>
+    <script>
+   
+      const name = document.getElementById("name");
+      const Specialization = document.getElementById("Specialization");
+      const dob = document.getElementById("birthdaytime");
+      const submit = document.getElementById("send");
+
+      let info = {};
+      submit.addEventListener('click', (e) =>{
+        e.preventDefault();
+      info.name = name.value;
+      info.Specialization= Specialization.value;
+      info.dob = dob.value;
+    console.log(info);
+      });
+
+
+    </script>
 </body>
 </html>
