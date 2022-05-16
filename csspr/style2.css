@@ -1,5 +1,164 @@
-.bgtable2 {
-    margin: 0px;
-    border: 2px solid #dc0000;
-    color: black;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+.btn {
+  background-color: #79db7d;
+  cursor: pointer;
+  /* left: 20px; */
+  color: rgb(0, 0, 0);
+  padding: 5px 5px;
+  width: 110px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+.drop {
+  margin: auto;
+  box-sizing: border-box;
+  position: relative;
+  padding: 10px 5px;
+  width: 110px;
+}
+.dropdown {
+  /* overflow : scroll; */
+  top: 3.2em;
+  position: absolute;
+  /* height: 100px; */
+  /* right: 0; */
+  left: 0;
+  background-color: rgb(204, 196, 196);
+  display: none;
+  width: 200px;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid rgb(143, 71, 71);
+}
+.toltip{
+  /* position: ; */
+  /* z-index: 2; */
+}
+/* .dropdown a{
+  position: relative;
+  z-index: 1;
+} */
+.dropdown::before {
+  /* z-index: -1; */
+  position: absolute;
+  /* right: 10px; */
+  left: 10px;
+  top: -0.4em;
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: #79db7d;
+   /* border-left: 20px solid transparent;
+  border-right: 20px solid transparent; */
+  border-left: 1px solid #030303; 
+  border-top: 1px solid #030303; 
+  transform: rotate(45deg);
+}
+.toltip{
+  overflow-y : scroll;
+  height: 100px;
+
+}
+
+a {
+  /* z-index: 1 */
+  /* height: 30px; */
+  color: rgb(0, 0, 0);
+  background-color: #79db7d;
+  padding: 10px;
+  /* text-align: center; */
+  display: block;
+  text-decoration: none;
+}
+.drop:hover .dropdown{
+  display: block;
+}
+.a1:hover{
+  background-color: #000000;
+}
+.dropdown:hover::before{
+  background-color:#79db7d;
+}
+a:hover{
+  background-color: #000000;
+  color: #fff;
+}
+.drop:hover .btn{
+  border: 2px solid #000000;
+}
+
+
+.accordion{
+  width: 500px;
+} 
+.section{
+  /* padding: 10px 15px; */
+  margin: 10px;
+}
+.par{
+  background-color: rgb(115, 108, 108);
+  margin-top: 10px;
+  padding: 10px 15px;
+}
+.ac{
+  padding: 10px 10px;
+}
+.accordion h3 + div {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease-in;
+}
+
+.accordion :target h3 + div {
+  height: 100px;
+}
+
+.accordion .section.large:target h3 + div {
+  overflow: auto;
+}
+
+/* transform css */
+hr{
+  margin: auto;
+  width: 50px;
+  background-color:#000000 ;
+  height: 350px;
+}
+.cap{
+  margin-top: 30px;
+  text-align: center;
+  font-weight: bold;
+  transform: rotate(-45deg);
+}
+
+/* new accordian css */
+/* .accordion2 {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 50%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: ease-in-out 1s;
+} */
+
+/* .active, .accordion:hover {
+  background-color: #ccc;
+} */
+
+/* .panel {
+  padding: 0 18px;
+  width:50%;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+} */

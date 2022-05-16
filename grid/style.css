@@ -1,0 +1,59 @@
+/* .nav{
+    display: inline-flex;
+    list-style-type: none;
+} */
+header{
+    padding:  10px 15px;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+}
+.a{
+    float: left;
+
+}
+.nav{
+    float: right;
+    /* padding: 10px; */
+    display: inline-flex;
+    list-style-type: none;
+}
+ul{
+    list-style-type: none;
+}
+li{
+    padding: 10px;
+}
+
+/*--- DROPDOWN ---*/
+.d1{
+    position: relative;
+}
+.a2 ul{
+    position: absolute;
+    display: none;
+    left: -40px;
+}
+.a2:hover ul{
+    display: block;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+/* .a3{
+    position: relative;
+}
+.a3 ul{
+    position: absolute;
+    left: -50px;
+
+
+    display: none;
+}
+.a3:hover ul{
+    display: block;
+} */
+
+/* transition animation */
+

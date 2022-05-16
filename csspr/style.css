@@ -14,3 +14,31 @@ th{
     border: 2px solid #ab3434;
 
 }
+.cl3{
+    background-color: #900000;
+}
+.cl1{
+    background-color: #ebe6e6;
+}
+.cl2{
+    background-color: #000000 ;
+}
+
+.a2:link{
+    color: rgb(114, 254, 0);
+   }
+   .a2:visited{
+     color: #000000;
+   }
+   .a2:hover{
+       color:#900000 ;
+       font-weight: bold;
+   }
+
+   p:first-child{
+       color: aqua;
+   }
+   input[type = "text"]:focus{
+       background-color: aquamarine;
+
+   }

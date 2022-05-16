@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Javascript Onsubmit Event Example</title>
+<!-- <link href="style.css" rel="stylesheet">  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		</head>
+		<body>
+		<h2>JavaScript Validation</h2>
+		<form name="myForm" action="#" onsubmit="return validateForm()" >
+			<label for="na">Name</label><br><br>
+				 <input type="text" name="fname" id="na"><br><br>
+				
+				<label for="mail">Email</label><br><br>
+				<input type="text" name="email" id="mail">
+				<br><br>
+				<label for="mobile">Mobile Number</label><br><br>
+				<input type="text" id="mobile" name="phone">
+				<br><br>
+				<label for="pswd">Password</label><br><br>
+				<input type="password" id="pswd" name="pass"><br><br>
+				<h1>Gender</h1>
+				<input type="radio" id="male" name="file" checked value="choose a file option">
+            <label for="male">Male</label><br>
+            <input type="radio" id="Fmale" name="file" value="choose a file option">
+            <label for="Fmale">Female</label><br><br>
+												<h1>Subjects</h1>
+												<input type="checkbox" data-validation-minchecked-minchecked="1"  id="English" name="eng" value="English">
+              <label for="S1">English</label><br>
+              <input type="checkbox" id="Hindi" value="eng" name="eng">
+              <label for="S2">Hindi</label><br>
+														
+              <input type="checkbox" id="Science" value="science" name="eng">
+              <label for="S3">Science</label><br>
+														
+              <input type="checkbox" id="History" value="History" name="eng">
+              <label for="S4">History</label><br>
+														
+              <input type="checkbox" id="Polity" value="Polity" name="eng">
+              <label for="S5">Polity</label><br>
+														
+              <input type="checkbox" id="Geography" value="geo" name="eng">
+              <label for="S6">Geography</label><br>
+														
+              <input type="checkbox" id="Aptitude" value="Apti" name="eng">
+              <label for="S7">Aptitude</label><br>
+														
+              <input type="checkbox" value="Zoology" id="Zoology" name="eng">
+              <label for="S8">Zoology</label><br>
+			<input type="checkbox" id="Botony" value ="Botony" name="eng">
+              <label for="S9">Botony</label><br>
+														
+              <input type="checkbox" id="Astronomy" name="eng">
+              <label for="S10">Astronomy</label><br>
+
+							<br><h2>Categiry</h2>
+							<label for="cars">Choose a car:</label>
+<select id="cars" name="cars">
+	<option selected disabled hidden >Select</option>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="fiat">Fiat</option>
+  <option value="audi">Audi</option>
+</select><br><br>
+<label>
+	<input type="file" id="file-upload" style="display: none;" multiple required />
+	<label for="file-upload" id="lbl" onclick="myFunction()"><img src="img/hello2.png" width="20" height="20" alt="img"></label>
+	<div id="file-upload-filename" style="padding: 10px;"></div><br><br>
+  <button id="rmv" onclick="myFunc()">Remove File</button><br><br>
+				<input type="submit" id="btn"  value="Submit"><br><br>
+				<input type="reset" id="rst" >
+		</form>
+		<script>
+			function validateForm(){
+				const name = document.forms["myForm"]["fname"].value;
+				const mail = document.forms["myForm"]["email"].value;
+				const Pnum = document.forms["myForm"]["phone"].value;
+				const psw = document.forms["myForm"]["pass"].value;
+			
+				// console.log(name,mail,Pnum,psw);
+    if(!name || !mail || !Pnum || !psw){
+					alert("all fields are req");
+				}
+					if (!name ) {
+							alert("Name must be filled out");
+					}else{
+						console.log(name);
+					}
+					let mailregex =  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+					if(mail.match(mailregex)){
+						console.log(mail)
+
+					}else{
+						alert("wrong input");
+					}
+					var number = /^[0-9]{10}$/;
+				if(!number.test(Pnum)){
+					alert("enter the valid number");
+				}else{
+					console.log(Pnum);
+				}
+    
+
+    var regularExpression  = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
+    if(!regularExpression.test(psw)) {
+        alert("password should contain atleast one number and one special character");
+        
+    }else{
+					console.log(psw);
+				}
+				var array = []
+            var checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
+            for (var i = 0; i < checkboxes.length; i++) {
+                array.push(checkboxes[i].value)
+            }
+            console.log(array.length)
+            if (array.length == 4) {
+                console.log(checkboxes);
+            } else {
+                alert('Check at least 4')
+				return false;
+			}
+			return false;
+		}
+		function myFunction(){
+              document.getElementById('lbl').style.display = "none";
+          }
+          var input = document.getElementById( 'file-upload' );
+var infoArea = document.getElementById( 'file-upload-filename' );
+
+input.addEventListener( 'change', showFileName );
+
+function showFileName( event ) {
+  
+  var input = event.srcElement;
+  
+  var fileName = input.files[0].name;
+  
+  infoArea.textContent = ' ' + fileName;
+}
+function myFunc(){
+	document.getElementById('lbl').style.display = "block";
+	document.getElementById('file-upload-filename').style.display = "none";
+}
+
+			</script>
+</body>
+</html>
