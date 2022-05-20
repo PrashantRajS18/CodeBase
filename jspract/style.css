@@ -1,0 +1,64 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #7fffd4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+.btn{
+    width: 30%;
+    background-color: bisque;
+    border: 1px solid brown;
+    cursor: pointer;
+    transition: ease-in-out 0.6s;
+
+}
+.btn:hover{
+    background-color: blueviolet;
+}
+.container{
+    padding: 20px;
+    /* margin: auto; */
+    border: 2px solid gold;
+    /* position: relative; */
+    background-color: aqua;
+    /* width: 40rem; */
+    width: 50%;
+}
+h1{
+    text-align: center;
+}
+.number{
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid black;
+    width: 5rem;
+}
+.between{
+    float: right;
+}
+.again{
+     
+    padding: 10px;
+
+}
+.left{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.check{
+    margin: 5px;
+    padding: 10px;
+
+}
+.guess{
+    padding: 10px;
+    border: 1px solid brown;
+    width: 50%;
+}
